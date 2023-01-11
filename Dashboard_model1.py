@@ -765,7 +765,7 @@ app.layout = html.Div([
                         html.H3('Fed Fund Rate Model Outlook based on Gas, Oil, Inflation expectations & Capacity Utilization'),
                         html.Div(children='''
                             Fed Fund Rate Change Model Outlook vs Fed Fund rate changes.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='final_fed_model',
                             figure=fig_final_fed_model
