@@ -508,7 +508,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             All Employees, Total Nonfarm.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='all_employees_total_nonfarm_payrolls',
                             figure=fig_all_employees_total_nonfarm_payrolls
@@ -519,7 +519,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             All Employees, Total Nonfarm (Net Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(all_employees_tot_nonfarm_change)
                         
                         ],style={'padding': 15, 'flex': 1}),
@@ -529,7 +529,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Employment level.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='employment_level',
                             figure=fig_employment_level
@@ -540,7 +540,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Employment level (Net_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(employment_level_change)
                         
                     ],style={'padding': 15, 'flex': 1})
@@ -558,7 +558,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Industrial Production: Total Index.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='industrial_production',
                             figure=fig_industrial_production
@@ -570,7 +570,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Industrial Production: Total Index (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(industrial_production_pct_change)
                         
                         ],style={'padding': 15, 'flex': 1}),
@@ -580,7 +580,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Manufaturning and Trade Industries Sales.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='employment_level2',
                             figure=fig_real_manufacturing_sales
@@ -592,7 +592,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Manufaturning and Trade Industries Sales (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_manufacturing_sales_pct_change)
                         
                     ],style={'padding': 15, 'flex': 1})
@@ -608,7 +608,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real personal income exluding current transfer receipts.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='real_pers_income_ex_curr_transfer_receipts',
                             figure=fig_real_pers_income_ex_curr_transfer_receipts
@@ -620,7 +620,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real personal income exluding current transfer receipts (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_pers_income_ex_curr_transfer_receipts_pct_change)
                         
                         ],style={'padding': 15, 'flex': 1}),
@@ -630,7 +630,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Personal Consumption Expenditures.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='employment_level3',
                             figure=fig_real_pers_consumption_expenditures
@@ -642,7 +642,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Personal Consumption Expenditures (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_pers_consumption_expenditures_pct_change)
                         
                     ],style={'padding': 15, 'flex': 1})
@@ -658,7 +658,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real GDP.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='real_gdp',
                             figure=fig_real_gdp
@@ -670,7 +670,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real GDP (Annual Rate of Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_gdp_annual_rate_of_change)
                         
                         ],style={'padding': 15, 'flex': 1}),
@@ -680,7 +680,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real GDI.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='real_gdi',
                             figure=fig_real_gdi
@@ -692,7 +692,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real GDI (Annual Rate of Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_gdi_annual_rate_of_change)
                         
                     ],style={'padding': 15, 'flex': 1})
@@ -708,7 +708,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Average GDP + GDI.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='real_avg_gdp_gdi',
                             figure=fig_real_avg_gdp_gdi
@@ -720,7 +720,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Real Average GDP + GDI (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(real_avg_gdp_gdi_annual_rate_of_change)
                         
                         ],style={'padding': 15, 'flex': 1}), 
@@ -732,7 +732,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Housing & Unemployment.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='Housing & Unemployment',
                             figure=fig_housing_data
@@ -744,7 +744,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Housing & Unemployment (Pct_Change).
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table2(housing_data)
                         
                     ],style={'padding': 15, 'flex': 1})
@@ -777,10 +777,10 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             Fed fund barometer model - if no rate hike announced, FED FUNDS RATE CHANGE will take prev value. 
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         html.Div(children='''
                             The Model values offer a monthly indication for the pace of the fed hiking cycle, e.g. should the fed continue with 75bp hikes or will the fed increase / decrease the pace based on key inflation parameters.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table2(final_fed_model_table)
                         
                     ],style={'padding': 15, 'flex': 1}),
@@ -791,7 +791,7 @@ app.layout = html.Div([
                         html.H3('CPI Monitor'),
                         html.Div(children='''
                             CPI.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         dcc.Graph(
                             id='cpi',
                             figure=fig_yoy_cpi_series
@@ -803,7 +803,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.Div(children='''
                             CPI YoY change in %.
-                        '''),
+                        ''', style={'font-weight': 'bold'}),
                         table(CPI_change_table)
                         
                         ],style={'padding': 15, 'flex': 1})
