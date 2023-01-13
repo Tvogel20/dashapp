@@ -494,7 +494,62 @@ tab_style = {
 #Row items
 app.layout = html.Div([
     dcc.Tabs([
-        dcc.Tab(label='NBER Recession Dashboard (inc. Housing)', style=tab_style, selected_style = tab_selected_style, children=[
+            dcc.Tab(label='Fed Rate Change Indicator & CPI Monitor', style=tab_style,selected_style = tab_selected_style, children=[
+            html.Div([
+                    #first item of first column tab 2
+                    html.Div(children=[
+                        
+                        html.Br(),
+                        html.H3('Fed Fund Rate Model Outlook based on Gas, Oil, Inflation expectations & Capacity Utilization'),
+                        html.Div(children='''
+                            Fed Fund Rate Change Model Outlook vs Fed Fund rate changes.
+                        ''', style={'font-weight': 'bold'}),
+                        dcc.Graph(
+                            id='final_fed_model',
+                            figure=fig_final_fed_model
+                        )
+                        ], style={'padding': 10, 'flex': 1}),
+                    #second item of first column tab 2
+                    html.Div(children=[
+                        
+                        html.Br(),
+                        html.Div(children='''
+                            Fed fund barometer model - if no rate hike announced, FED FUNDS RATE CHANGE will take prev value. 
+                        ''', style={'font-weight': 'bold'}),
+                        html.Div(children='''
+                            The Model values offer a monthly indication for the pace of the fed hiking cycle, e.g. should the fed continue with 75bp hikes or will the fed increase / decrease the pace based on key inflation parameters.
+                        ''', style={'font-weight': 'bold'}),
+                        table2(final_fed_model_table)
+                        
+                    ],style={'padding': 15, 'flex': 1}),
+                    #second item of second column tab 2
+                    html.Div(children=[
+                        
+                        html.Br(),
+                        html.H3('CPI Monitor'),
+                        html.Div(children='''
+                            CPI.
+                        ''', style={'font-weight': 'bold'}),
+                        dcc.Graph(
+                            id='cpi',
+                            figure=fig_yoy_cpi_series
+                        )
+                        ], style={'padding': 10, 'flex': 1}),
+                    #second item of second column tab 2
+                    html.Div(children=[
+                        
+                        html.Br(),
+                        html.Div(children='''
+                            CPI YoY change in %.
+                        ''', style={'font-weight': 'bold'}),
+                        table(CPI_change_table)
+                        
+                        ],style={'padding': 15, 'flex': 1})
+                    
+                ], style={'width': 'auto' , 'display': 'flex', 'flex-direction': 'column'})
+
+        ]),
+        dcc.Tab(label='NBER Recession Dashboard (click me)', style=tab_style, selected_style = tab_selected_style, children=[
             html.Div([
                 html.H1('NBER Recession Indicators', style={'textAlign': 'center','margin-top': '50px'}),
                 html.Br(),
@@ -755,61 +810,6 @@ app.layout = html.Div([
 
 
             ], style={'width': 'auto' , 'display': 'flex', 'flex-direction': 'column'})
-        ]),
-        dcc.Tab(label='Fed Rate Change Indicator & CPI Monitor (click me)', style=tab_style,selected_style = tab_selected_style, children=[
-            html.Div([
-                    #first item of first column tab 2
-                    html.Div(children=[
-                        
-                        html.Br(),
-                        html.H3('Fed Fund Rate Model Outlook based on Gas, Oil, Inflation expectations & Capacity Utilization'),
-                        html.Div(children='''
-                            Fed Fund Rate Change Model Outlook vs Fed Fund rate changes.
-                        ''', style={'font-weight': 'bold'}),
-                        dcc.Graph(
-                            id='final_fed_model',
-                            figure=fig_final_fed_model
-                        )
-                        ], style={'padding': 10, 'flex': 1}),
-                    #second item of first column tab 2
-                    html.Div(children=[
-                        
-                        html.Br(),
-                        html.Div(children='''
-                            Fed fund barometer model - if no rate hike announced, FED FUNDS RATE CHANGE will take prev value. 
-                        ''', style={'font-weight': 'bold'}),
-                        html.Div(children='''
-                            The Model values offer a monthly indication for the pace of the fed hiking cycle, e.g. should the fed continue with 75bp hikes or will the fed increase / decrease the pace based on key inflation parameters.
-                        ''', style={'font-weight': 'bold'}),
-                        table2(final_fed_model_table)
-                        
-                    ],style={'padding': 15, 'flex': 1}),
-                    #second item of second column tab 2
-                    html.Div(children=[
-                        
-                        html.Br(),
-                        html.H3('CPI Monitor'),
-                        html.Div(children='''
-                            CPI.
-                        ''', style={'font-weight': 'bold'}),
-                        dcc.Graph(
-                            id='cpi',
-                            figure=fig_yoy_cpi_series
-                        )
-                        ], style={'padding': 10, 'flex': 1}),
-                    #second item of second column tab 2
-                    html.Div(children=[
-                        
-                        html.Br(),
-                        html.Div(children='''
-                            CPI YoY change in %.
-                        ''', style={'font-weight': 'bold'}),
-                        table(CPI_change_table)
-                        
-                        ],style={'padding': 15, 'flex': 1})
-                    
-                ], style={'width': 'auto' , 'display': 'flex', 'flex-direction': 'column'})
-
         ])
     ])
 ])
