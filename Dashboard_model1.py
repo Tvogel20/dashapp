@@ -497,7 +497,7 @@ gdpforecatchart.update_layout(
         showgrid=True
     ),
     title=dict(
-        text='Evolution of real GDP growth forcast: 2023Q1',
+        text='Real GDP growth forecast: 2023Q1',
         font=dict(size=22, color='White', family='Arial'),
         xanchor='left'
     ),
