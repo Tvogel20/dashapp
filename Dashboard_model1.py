@@ -907,7 +907,7 @@ app.scripts.append_script({
     'external_url': 'https://www.googletagmanager.com/gtag/js?id=G-T4WV5HS8E8'
 })
 app.scripts.append_script({
-    'external_url': 'https://cdn.jsdelivr.net/gh/lppier/lppier.github.io/gtag.js'
+    'external_url': 'https://cdn.jsdelivr.net/gh/Tvogel20/dashapp/gtag.js'
 })
 
 
