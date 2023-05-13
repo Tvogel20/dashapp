@@ -904,10 +904,10 @@ app.layout = html.Div([
 #google analytics
 app.scripts.config.serve_locally = False
 app.scripts.append_script({
-‘external_url’: ‘https://www.googletagmanager.com/gtag/js?id=UA-131327483-1’
+  ‘external_url’: ‘https://www.googletagmanager.com/gtag/js?id=UA-131327483-1’
 })
 app.scripts.append_script({
-‘external_url’: ‘https://cdn.jsdelivr.net/gh/Tvogel20/dashapp.github.io/gtag.js’
+  ‘external_url’: ‘https://cdn.jsdelivr.net/gh/Tvogel20/dashapp.github.io/gtag.js’
 })
 
 
