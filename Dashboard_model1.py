@@ -545,6 +545,14 @@ tab_style = {
 }
 
 
+#google analytics
+app.scripts.config.serve_locally = False
+app.scripts.append_script({
+    'external_url': 'https://www.googletagmanager.com/gtag/js?id=G-T4WV5HS8E8'
+})
+app.scripts.append_script({
+    'external_url': 'https://cdn.jsdelivr.net/gh/Tvogel20/dashapp/gtag.js'
+})
 
 #Row items
 app.layout = html.Div([
@@ -901,14 +909,6 @@ app.layout = html.Div([
     ])
 ])
 
-#google analytics
-app.scripts.config.serve_locally = False
-app.scripts.append_script({
-    'external_url': 'https://www.googletagmanager.com/gtag/js?id=G-T4WV5HS8E8'
-})
-app.scripts.append_script({
-    'external_url': 'https://cdn.jsdelivr.net/gh/Tvogel20/dashapp/gtag.js'
-})
 
 
 
