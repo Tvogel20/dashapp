@@ -563,7 +563,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.H3('Recession Monitor Readme'),
                         html.Div(children='''
-                            You can use the top two tabs (black and white) to navigate between the recession monitors and the recession indicators. You can download charts by clicking on the download button on the top right of each chart/table.
+                            You can use the top two tabs (black and white) to navigate between the recession monitors and the recession indicators. You can download charts by clicking on the download button on the top right of each chart.
                         '''),
                         html.Div(children='''
                             For any questions or comments please reach out to: tom.vogel22@imperial.ac.uk
