@@ -563,7 +563,7 @@ app.layout = html.Div([
                         html.Br(),
                         html.H3('Recession Monitor Readme'),
                         html.Div(children='''
-                            You can use the top two tabs (black and white) to navigate between the recession monitors and the recession indicators. You can download most data and charts by clicking on the download button on the top right of each chart/table.
+                            You can use the top two tabs (black and white) to navigate between the recession monitors and the recession indicators. You can download charts by clicking on the download button on the top right of each chart/table.
                         '''),
                         html.Div(children='''
                             For any questions or comments please reach out to: tom.vogel22@imperial.ac.uk
@@ -587,7 +587,7 @@ app.layout = html.Div([
                         
                         html.Br(),
                         html.Div(children='''
-                            GDP Forecast (Pct_Change) will be updated once a month. 
+                            GDP Forecast (Pct_Change) will be updated once a month at the beginning of the consecutive month e.g. for gdp nowcast of mai, update will be given by beginning of April. 
                         ''')
                         
                     ],style={'padding': 15, 'flex': 1}),
