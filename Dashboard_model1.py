@@ -39,13 +39,13 @@ today= pd.to_datetime('today').strftime('%Y-%m-%d')
 
 #df_nber_mth = pd.read_csv('https://fred.stlouisfed.org/graph/fredgraph.csv?bgcolor=%23e1e9f0&chart_type=line&drp=0&fo=open%20sans&graph_bgcolor=%23ffffff&height=450&mode=fred&recession_bars=on&txtcolor=%23444444&ts=12&tts=12&width=968&nt=0&thu=0&trc=0&show_legend=yes&show_axis_titles=yes&show_tooltip=yes&id=PAYEMS,CE16OV,INDPRO,CMRMTSPL,W875RX1,PCEC96&scale=left,left,left,left,left,left&cosd=1968-05-25,1968-05-25,1968-05-25,1968-05-25,1968-05-25,2002-01-01&coed=2022-08-01,2022-08-01,2022-07-01,2022-06-01,2022-07-01,2022-07-01&line_color=%234572a7,%23aa4643,%2389a54e,%2380699b,%233d96ae,%23db843d&link_values=false,false,false,false,false,false&line_style=solid,solid,solid,solid,solid,solid&mark_type=none,none,none,none,none,none&mw=3,3,3,3,3,3&lw=2,2,2,2,2,2&ost=-99999,-99999,-99999,-99999,-99999,-99999&oet=99999,99999,99999,99999,99999,99999&mma=0,0,0,0,0,0&fml=a,a,a,a,a,a&fq=Monthly,Monthly,Monthly,Monthly,Monthly,Monthly&fam=avg,avg,avg,avg,avg,avg&fgst=lin,lin,lin,lin,lin,lin&fgsnd=2020-02-01,2020-02-01,2020-02-01,2020-02-01,2020-02-01,2020-02-01&line_index=1,2,3,4,5,6&transformation=lin,lin,lin,lin,lin,lin&vintage_date=2022-09-07,2022-09-07,2022-09-07,2022-09-07,2022-09-07,2022-09-07&revision_date=2022-09-07,2022-09-07,2022-09-07,2022-09-07,2022-09-07,2022-09-07&nd=1939-01-01,1948-01-01,1919-01-01,1967-01-01,1959-01-01,2002-01-01',
 #                        na_values='.')
+
 #reset date to today
 df_nber_mth = pd.read_csv('https://fred.stlouisfed.org/graph/fredgraph.csv?bgcolor=%23e1e9f0&chart_type=line&drp=0&fo=open%20sans&graph_bgcolor=%23ffffff&height=450&mode=fred&recession_bars=on&txtcolor=%23444444&ts=12&tts=12&width=968&nt=0&thu=0&trc=0&show_legend=yes&show_axis_titles=yes&show_tooltip=yes&id=PAYEMS,CE16OV,INDPRO,CMRMTSPL,W875RX1,PCEC96&scale=left,left,left,left,left,left&cosd=1968-05-25,1968-05-25,1968-05-25,1968-05-25,1968-05-25,2002-01-01&coed={x},{x},{x},{x},{x},{x}&line_color=%234572a7,%23aa4643,%2389a54e,%2380699b,%233d96ae,%23db843d&link_values=false,false,false,false,false,false&line_style=solid,solid,solid,solid,solid,solid&mark_type=none,none,none,none,none,none&mw=3,3,3,3,3,3&lw=2,2,2,2,2,2&ost=-99999,-99999,-99999,-99999,-99999,-99999&oet=99999,99999,99999,99999,99999,99999&mma=0,0,0,0,0,0&fml=a,a,a,a,a,a&fq=Monthly,Monthly,Monthly,Monthly,Monthly,Monthly&fam=avg,avg,avg,avg,avg,avg&fgst=lin,lin,lin,lin,lin,lin&fgsnd=2020-02-01,2020-02-01,2020-02-01,2020-02-01,2020-02-01,2020-02-01&line_index=1,2,3,4,5,6&transformation=lin,lin,lin,lin,lin,lin&vintage_date={x},{x},{x},{x},{x},{x}&revision_date={x},{x},{x},{x},{x},{x}&nd=1939-01-01,1948-01-01,1919-01-01,1967-01-01,1959-01-01,2002-01-01'.format(x=today),
                         na_values='.')
 df_nber_mth.set_index('DATE',inplace=True)
 
 #monthly datasets
-
 all_employees_tot_nonfarm = df_nber_mth['PAYEMS'] #All Employees: Total Nonfarm
 
 """
